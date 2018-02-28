@@ -1,0 +1,50 @@
+<% include ../partials/header %>
+    <div class="row">
+        <h1 style="text-align: center">Create a New Campground</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/campgrounds" method="POST">
+                <div class="form-group">
+                    <label for="name">Name of the campground:</label>
+                    <input class="form-control" type="text" name="name" id="name" placeholder="name">
+                </div>
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input class="form-control" type="number" name="price" id="price" placeholder="price" min="0.01" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="street">Street:</label>
+                    <input class="form-control" type="text" name="street" id="street" placeholder="Jeruzalem Avenue">
+                </div>
+                <div class="form-group">
+                    <label for="number">Number:</label>
+                    <input class="form-control" type="number" name="number" id="number" placeholder="45" min="1" step="1">
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input class="form-control" type="text" name="city" id="city" placeholder="Warsaw">
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <input class="form-control" type="text" name="country" id="country" placeholder="Poland">
+                </div>
+                <div class="form-group">
+                    <label for="postal_code">Postal-Code:</label>
+                    <input class="form-control" type="text" name="postal_code" id="postal_code" placeholder="02-089">
+                </div>
+                <div class="form-group">
+                    <label for="image">Image URL:</label>
+                    <input class="form-control" type="text" name="image" id="image" placeholder="image url">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <input class="form-control" type="text" name="description" placeholder="description">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+<% include ../partials/footer %>
+

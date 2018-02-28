@@ -1,0 +1,49 @@
+<% include ../partials/header %>
+    <div class="row">
+        <h1 style="text-align: center">Edit <%= campground.name %></h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <label for="name">Name of the campground:</label>
+                    <input class="form-control" type="text" name="campground[name]" value="<%= campground.name %>" placeholder="Name of the campground">
+                </div>
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input class="form-control" type="number" name="campground[price]" value="<%= campground.price %>" placeholder="Price" min="0.01" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="street">Street:</label>
+                    <input class="form-control" type="text" name="campground[street]" id="street" value="<%= campground.address.street %>" placeholder="Jeruzalem Avenue">
+                </div>
+                <div class="form-group">
+                    <label for="number">Number:</label>
+                    <input class="form-control" type="number" name="campground[number]" id="number" value="<%= campground.address.number %>" placeholder="45" min="1" step="1">
+                </div>
+                <div class="form-group">
+                    <label for="postal_code">Postal-Code:</label>
+                    <input class="form-control" type="text" name="campground[postal_code]" id="postal_code" value="<%= campground.address.postal_code %>" placeholder="02-089">
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input class="form-control" type="text" name="campground[city]" id="city" value="<%= campground.address.city %>" placeholder="Warsaw">
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <input class="form-control" type="text" name="campground[country]" id="country" value="<%= campground.address.country %>" placeholder="Poland">
+                </div>
+                <div class="form-group">
+                    <label for="image">Image URL:</label>
+                    <input class="form-control" type="text" name="campground[image]" value="<%= campground.image %>" placeholder="Image URL">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <input class="form-control" type="text" name="campground[description]" value="<%= campground.description %>" placeholder="Description">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/campgrounds">Go Back</a>
+        </div>
+    </div>
+<% include ../partials/footer %>
